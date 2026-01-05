@@ -34,3 +34,8 @@ Webpack 的理解：你想把 webpack.config.js 这个文件本身给“打包�
 如果用默认文件名 (webpack.config.js)：直接运行 npx webpack 即可，它会自动识别，不需要加参数。
 如果你用了非默认文件名（比如 webpack.prod.js）：你必须运行 npx webpack --config webpack.prod.js。
 如果你误传了路径：Webpack 会把它当成源码入口，从而导致各种环境不匹配的报错。
+
+
+### v4.0  考虑到使用 CLI 这种方式运行本地 webpack 副本不是特别方便，可以在 package.json 文件中添加 npm script 以设置一个快捷方式："build": "webpack"
+
+现在可以使用 npm run build 命令替代之前使用的 npx 命令。注意，使用 npm scripts 便可以像使用 npx 那样通过模块名引用本地安装的 npm 包。
