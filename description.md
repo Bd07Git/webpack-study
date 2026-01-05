@@ -39,3 +39,8 @@ Webpack 的理解：你想把 webpack.config.js 这个文件本身给“打包�
 ### v4.0  考虑到使用 CLI 这种方式运行本地 webpack 副本不是特别方便，可以在 package.json 文件中添加 npm script 以设置一个快捷方式："build": "webpack"
 
 现在可以使用 npm run build 命令替代之前使用的 npx 命令。注意，使用 npm scripts 便可以像使用 npx 那样通过模块名引用本地安装的 npm 包。
+
+
+### v5.0  之前都是在index.html中手动引入资源，但是实际开发中，随着应用程序的不断增长，手动引入资源的方式已经不能满足需求了。使用插件可以更容易地管理资源。
+比如现在有多个入口文件（entry），每个入口文件对应一个输出文件（output）。我们不可能每次都在index.html中手动引入资源。
+npm install --save-dev html-webpack-plugin
