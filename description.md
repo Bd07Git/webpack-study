@@ -44,3 +44,21 @@ Webpack 的理解：你想把 webpack.config.js 这个文件本身给“打包�
 ### v5.0  之前都是在index.html中手动引入资源，但是实际开发中，随着应用程序的不断增长，手动引入资源的方式已经不能满足需求了。使用插件可以更容易地管理资源。
 比如现在有多个入口文件（entry），每个入口文件对应一个输出文件（output）。我们不可能每次都在index.html中手动引入资源。
 npm install --save-dev html-webpack-plugin
+
+### v6.0  每次编译代码都需要手动运行 npm run build 会显得很麻烦。所以需要学习如何自动编译代码。
+webpack 提供了几种可选方式帮助在代码发生变化后自动编译代码：
+
+**webpack 的 观察模式**
+webpack 的 观察模式. 就是在代码发生变化后自动编译代码。
+配置如下脚本
+```
+"watch": "webpack --watch"
+```
+npm run watch
+编译完成后会发现它并没有退出命令行，这是因为该脚本当前还在观察你的文件.
+唯一缺点：每次修改代码都需要手动刷新浏览器才能看到修改后的实际效果，而webpack-dev-server可以自动刷新浏览器。
+**webpack-dev-server**
+
+
+**webpack-dev-middleware**
+在多数场景中可能会使用 webpack-dev-server，但是不妨探讨一下以上的所有选项。

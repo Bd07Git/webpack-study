@@ -13,6 +13,9 @@ module.exports = {
     clean: true
   },
   devtool: 'eval-source-map',
+  devServer: {
+    static:'./dist',
+  },
   module: {
     rules: [
       {
@@ -28,5 +31,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '管理输出'
     })
-  ]
+  ],
+  optimization:{
+    runtimeChunk: 'single',
+  }
 }
