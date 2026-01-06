@@ -18,6 +18,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "@fdfe/math-utils": "^1.0.0",
     "lodash": "^4.17.21"
   }
 }
